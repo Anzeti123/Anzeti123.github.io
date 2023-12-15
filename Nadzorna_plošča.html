@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+   
+<head>
+   <title>Vremenska postaja</title>
+   <link rel="stylesheet" href="styles.css">
+   
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.1/mqttws31.js" type="text/javascript">    </script> 
+
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <script src="http://code.highcharts.com/stock/highstock.js"></script>
+    <script src="http://code.highcharts.com/stock/modules/exporting.js"></script>
+	<script src="MQTT.js"></script>
+
+</head>
+
+<body onload="init();">   
+   
+    <header> 
+    <nav>  
+      <ul class="naslovi">
+         <li class="naslovi"><a href="index.html"><b>O projektu</b></a></a></li>
+         <li class="naslovi"><a href="Nadzorna_plošča.html"><b>Nadzorna plošča</b></a></a></li>
+         <li class="naslovi"><a href="test_page.html"><b>Test page</b></a></a></li>
+      </ul> 
+    </nav>  
+    <h1>Nadzorna plošča</h1>    
+    </header>
+    
+    <table>
+      <tr>
+        <td> <p><b> Temperatura:</b></p> <div class="tabela" id="temperature" > </div> </td>
+        <td> <p> <b>Vlažnost: </b></p> <div class="tabela" id="humidity" > </div> </td>
+        <td> <p> <b>Tlak: </b></p> <div class="tabela" id="humidity" > </div> </td>
+        <td> <p> <b>UV žarki: </b></p> <div class="tabela" id="humidity" > </div> </td>
+        <td> <p> <b>Osvetljenost: </b></p> <div class="tabela" id="humidity" > </div> </td>
+        <td> <p> <b>Hitrost vetra: </b></p> <div class="tabela" id="humidity" > </div> </td>
+        <td> <p> <b>Smer vetra: </b></p> <div class="tabela" id="humidity" > </div> </td>
+      </tr>
+    </table>
+  
+    
+  
+    <script>
+      function getInputValue() {
+        // Selecting the input element and get its value 
+        var x = document.getElementById("zeljena_temperatura").value;
+        var y = document.getElementById("zeljena_vlaga").value;
+        // Displaying the value
+        send_message(x, 0, temp_topic);
+        send_message(y, 0, humi_topic);
+      }
+    </script>
+   
+
+    <p> <div class="graf"  id="container"> </p></div> </td> 
+    <footer>
+      Copyright © Anzeti
+  </footer>
+</body>
+</html>

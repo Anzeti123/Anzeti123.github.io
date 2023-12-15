@@ -1,0 +1,142 @@
+body{
+    
+    color: rgb(0, 0, 0);
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: 0px;
+    background-color: rgb(231, 231, 231);
+}
+header{
+color: black;
+background: limegreen;
+margin: 0px;
+padding: 20px;
+height: 100px;
+background-size: 100%;
+}
+ul.naslovi{
+    margin: 0px;
+    padding: 0px;
+    font-size: larger;
+    list-style-type: none;
+    
+    }
+    
+li.naslovi{
+    color: gray;
+    padding: 5px;
+    display: inline-block;
+    margin-left: 20px;
+    margin-top: 0px;  
+}
+
+a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    background-color:rgb(156, 156, 156);
+    padding: 7px;
+    border-radius: 25px;
+    
+}
+a:hover{
+   
+    font-size: x-large;
+}
+li.naslovi:hover{
+    font-size: x-large;
+    
+    color: white;
+}
+
+h1{
+    margin-left: 25px;
+
+}
+
+section.opis{
+background: rgb(230, 229, 229);
+color: black;
+padding:20px 20px 20px 20px ;
+display: flex;
+flex-direction: row;
+}
+
+section.funk{ 
+    background: rgb(230, 229, 229);
+    color: black;
+    padding:20px 20px 20px 20px ;
+    display: flex;
+    flex-direction: row;
+    }
+
+div{
+    display: flex;
+    flex-direction: column;
+    }
+
+h3{
+ display:block ;
+ padding:20px 20px 20px 20px ;
+ margin-right: 20px;
+}
+
+footer{
+color: rgb(255, 255, 255);
+background: rgb(0, 0, 0);
+padding: 10px 20px;
+text-align: center;
+
+
+}
+div{
+    padding:0px;
+       
+}
+
+ul{
+    margin: 7px;
+    padding: 0px;  
+ }
+
+div.graf{
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 3px;
+    background-color:black;
+    height:500px; 
+    min-width:500px;
+}
+
+div.tabela{
+    font-family: Arial;
+    font-size: 14px;
+    color: black;
+    text-align: center;
+    }
+
+table, tr, td{
+     margin:20px;
+     background-color: lightgray;
+     border-collapse: collapse;
+     border:3px solid black;
+     text-align: left; 
+     margin-left: auto;
+     margin-right: auto;
+    
+     }  
+
+td{
+padding:5px;
+}
+
+img{
+    height:auto; 
+    width:auto;
+    border:3px solid black;
+    margin:20px;
+}
+    
+
+     
+   
