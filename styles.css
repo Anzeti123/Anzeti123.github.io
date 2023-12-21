@@ -117,6 +117,12 @@ div.tabela{
     text-align: center;
     }
 
+table.radarska_slika{  
+
+    border-collapse: collapse;
+    border: 1px solid black !important;
+    }
+
 table, tr, td{
      margin:20px;
      background-color: rgb(13, 17, 23);
@@ -138,11 +144,7 @@ img{
     margin:20px;
 }
 
-table.radarska_slika{  
-   
-border-collapse: collapse;
-border: 1px solid black;
-}
+
 
 div.radarska_slika{
     text-align: center;    

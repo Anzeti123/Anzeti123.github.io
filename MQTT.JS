@@ -9,8 +9,8 @@ public broker and topic you can use for testing.
 */
 
 //settings BEGIN
-var MQTTbroker = 'broker.hivemq.com';
-var MQTTport = 8000;
+var MQTTbroker = '57d8fc4ffb864e72998313352c49d6af.s1.eu.hivemq.cloud';
+var MQTTport = 8883;
 var MQTTsubTopic = 'BQ/txt/'; //works with wildcard # and + topics dynamically now
 var temp_topic = "BQ/temp";
 var humi_topic = "BQ/humidity";
@@ -18,8 +18,8 @@ var klima_status_topic = "klima";
 var txt_topic = "BQ/txt"
 var retain_flag = true;
 
-var user_name = "anzeti";
-var pass = "anzeti123";
+var user_name = "hivemq.webclient.1703163288728";
+var pass = "F2pDjcKW:6Bd4E?#&te8";
 //settings END
 
 var chart; // global variuable for chart
