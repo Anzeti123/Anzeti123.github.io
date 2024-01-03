@@ -20,6 +20,7 @@ var retain_flag = true;
 
 var user_name = "hivemq.webclient.1704303280402";
 var pass = "kW?3f@J51d2DSOc;Ave*";
+
 //settings END
 
 var chart; // global variuable for chart
