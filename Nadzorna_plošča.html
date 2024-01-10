@@ -8,10 +8,25 @@
  <script src="https://cdnjs.cloudflare.com/ajax/libs/mqtt/4.0.1/mqtt.min.js" type="text/javascript">   </script> 
  <!--<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>-->
 		<script src="MQTT.JS"></script>
+    <script>
+      function initMQTT() {
+      const client = mqtt.connect(mqttBroker, mqttOptions);
+
+      client.on('connect', function () {
+        console.log('Connected to MQTT broker');
+        client.subscribe(temp_topic);
+        console.log('Subscribed to topic:', temp_topic);
+      });
+
+      client.on('message', function (topic, message) {
+        onMessageArrived({ destinationName: topic, payloadString: message.toString() });
+      });
+    }
+    </script>
 
 </head>
 
-<body onload="init_mqtt()">   
+<body onload="initMQTT()">   
    
     <header> 
     <nav>  
