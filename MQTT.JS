@@ -22,7 +22,7 @@ var pass = "";
 
 //settings END
 
-const mqttBroker = 'ws://test.mosquitto.org:8080'; // Change this to your MQTT broker address
+const mqttBroker = 'wss://test.mosquitto.org:8080'; // Change this to your MQTT broker address
 const mqttOptions = {
   clientId: 'web-client-' + Math.random().toString(16).substr(2, 8),
   // Omit username and password for brokers that don't require authentication
