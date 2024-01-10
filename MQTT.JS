@@ -30,7 +30,7 @@ const mqttOptions = {
 
 const temp_topic = 'temperatura'; // Change this to your actual temperature topic
 
-function initMQTT() {
+function init_mqtt() {
   const client = mqtt.connect(mqttBroker, mqttOptions);
 
   client.on('connect', function () {
