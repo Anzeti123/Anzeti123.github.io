@@ -55,7 +55,7 @@ function onMessageArrived(message) {
   console.log(message.destinationName, '', message.payloadString);
 
   if (message.destinationName === temp_topic) {
-    const temperatureElement = document.getElementById("temperatura");
+    const temperatureElement = document.getElementById("WS_temp");
     temperatureElement.innerHTML = message.payloadString;
   }
 
