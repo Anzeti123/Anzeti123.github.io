@@ -44,6 +44,18 @@ function init_mqtt() {
     console.log('Connected to MQTT broker');
     client.subscribe(temp_topic);
     console.log('Subscribed to topic:', temp_topic);
+    client.subscribe(humidity_topic);
+    console.log('Subscribed to topic:', humidity_topic);
+    client.subscribe(pressure_topic);
+    console.log('Subscribed to topic:', pressure_topic);
+    client.subscribe(UVlight_topic);
+    console.log('Subscribed to topic:', UVlight_topic);
+    client.subscribe(brightness_topic);
+    console.log('Subscribed to topic:', brightness_topic);
+    client.subscribe(wind_speed_topic);
+    console.log('Subscribed to topic:', wind_speed_topic);
+    client.subscribe(wind_direction_topic);
+    console.log('Subscribed to topic:', wind_direction_topic);
   });
 
   client.on('message', function (topic, message) {
