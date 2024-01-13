@@ -28,7 +28,14 @@ const mqttOptions = {
   // Omit username and password for brokers that don't require authentication
 };
 
-const temp_topic = 'temperatura'; // Change this to your actual temperature topic
+const temp_topic = 'WS_temp'; // Change this to your actual temperature topic
+const humidity_topic = 'WS_humidity';
+const pressure_topic = 'WS_pressure';
+const UVlight_topic = 'WS_UVlight';
+const brightness_topic = 'WS_brightness';
+const wind_speed_topic = 'WS_wind_speed';
+const wind_direction_topic = 'WS_wind_direction';
+
 
 function init_mqtt() {
   const client = mqtt.connect(mqttBroker, mqttOptions);
@@ -49,6 +56,36 @@ function onMessageArrived(message) {
 
   if (message.destinationName === temp_topic) {
     const temperatureElement = document.getElementById("temperatura");
+    temperatureElement.innerHTML = message.payloadString;
+  }
+
+  if (message.destinationName === humidity_topic) {
+    const temperatureElement = document.getElementById("WS_humidity");
+    temperatureElement.innerHTML = message.payloadString;
+  }
+
+  if (message.destinationName === pressure_topic) {
+    const temperatureElement = document.getElementById("WS_pressure");
+    temperatureElement.innerHTML = message.payloadString;
+  }
+
+  if (message.destinationName === UVlight_topic) {
+    const temperatureElement = document.getElementById("WS_UVlight");
+    temperatureElement.innerHTML = message.payloadString;
+  }
+
+  if (message.destinationName === brightness_topic) {
+    const temperatureElement = document.getElementById("WS_brightness");
+    temperatureElement.innerHTML = message.payloadString;
+  }
+
+  if (message.destinationName === wind_speed_topic) {
+    const temperatureElement = document.getElementById("WS_wind_speed");
+    temperatureElement.innerHTML = message.payloadString;
+  }
+
+  if (message.destinationName === wind_direction_topic) {
+    const temperatureElement = document.getElementById("WS_wind_direction");
     temperatureElement.innerHTML = message.payloadString;
   }
 }  
