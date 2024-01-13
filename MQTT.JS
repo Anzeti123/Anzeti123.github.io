@@ -42,6 +42,7 @@ function init_mqtt() {
 
   client.on('connect', function () {
     console.log('Connected to MQTT broker');
+    
     client.subscribe(temp_topic);
     console.log('Subscribed to topic:', temp_topic);
     client.subscribe(humidity_topic);
