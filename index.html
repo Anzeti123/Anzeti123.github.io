@@ -2,55 +2,166 @@
 <html>
 
 <head>
-   <title>Vremenska postaja</title>
-   <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vremenska postaja</title>
+  <!----======== CSS ======== -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!----===== Boxicons CSS ===== -->
+  <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+  <!--<title>Dashboard Sidebar Menu</title>-->
 </head>
 
-<body>   
-     
+<body>
+  <nav class="sidebar close">
     <header>
-        <nav>  
-      <ul class="naslovi">
-         <li class="naslovi"><a href="index.html"><b>O projektu</b></a></a></li>
-         <li class="naslovi"><a href="Nadzorna_plošča.html"><b>Trenutna vrednost</b></a></a></li>
-         <li class="naslovi"><a href="test_page.html"><b>Zgodovina meritev</b></a></a></li>
-         <li class="naslovi"><a href="radarska_slika.html"><b>Radarska slika</b></a></a></li>
-      </ul>  
-    </nav>    
-    <h1>O projektu</h1>
+      <div class="image-text">
+        
+
+        <div class="text logo-text">
+          <span class="name">Vremenska postaja</span>
+         
+        </div>
+      </div>
+
+      <i class='bx bx-chevron-right toggle'></i>
     </header>
 
+    <div class="menu-bar">
+      <div class="menu">
 
 
-<table class="projekt">
-    <tr>
-      <td> <p><h3>Opis projekta</h3></p> <div class="tabela"  > </div> </td>
-      <td> <p><div>V okvirju projekta pri predmetu praktikum bo izdelana vremenska postaja. Na vremenski postaji bodo različni senzorji, 
-        ki bodo merili podatke o vremenu. Merili bomo temperaturo ozračja, vlago v zraku, tlak v atmosferi ter hitrost in smer vetra. 
-        Vremenska postaja bo delovala ''off grid'' kar pomeni, da ne bo priključena na omrežje ampak bo imela vgrajeno baterijo, 
-        ki se bo polnila preko sončnega panela. Prednost takšne postaje je da jo lahko postavimo kjerkoli želimo. Ohišje bo sestavljeno tako, 
-        da vremenski vplivi ne bodo imeli vpliva na delovanje. Uporabnik bo lahko izmerjene podatke spremljal na spletni strani, kjer bo glede 
-        na izmerjene podatke videna napoved vremena. Podatki se bodo na spletni strani prikazovali preko serverja, ki bo izmerjene podatke 
-        dobil iz WI-FI modula in mikroprocesorja. Dostop do interneta pa bo omogočal industrijski modem oz. usmerjevalnik Teltonika RUT240 LTE.
-    </div></p> </td>
-    </tr>
-  
-    <tr>
-      <td> <p><h3>Potrebne naprave in funkcije sistema</h3></p> <div class="tabela"  > </div> </td>
-      <td> <p>-Senzorji: Temperatura, vlaga, tlak, UV žarki, osvetljenost, hitrost in smer vetra
-        <br>-Mikrokrmilnik ARM: STM32F
-        <br>-Napajalnik z sončnimi paneli in baterijo
-        <br>-WIFI modul ESP8266 in zunanji 4G modem oz. usmernik Teltonika RUT240</p> <div class="tabela"  > </div> </td>
-    </tr>
-  </table>
+        <ul class="menu-links">
+          <li class="nav-link">
+            <a href="index.html">
+              <i class='bx bx-home-alt icon'></i>
+              <span class="text nav-text">O projektu</span>
+            </a>
+          </li>
 
-  <img src="blok.png" alt="blok shema" >
+          <li class="nav-link">
+            <a href="Trenutna_vrednost.html">
+              <i class='bx bx-line-chart icon'></i>
+              <span class="text nav-text">Trenutna vrednost</span>
+            </a>
+          </li>
+
+          <li class="nav-link">
+            <a href="Zgodovina_meritev.html">
+              <i class='bx bx-history icon'></i>
+              <span class="text nav-text">Zgodovina meritev</span>
+            </a>
+          </li>
+
+          <li class="nav-link">
+            <a href="Radarska_slika.html">
+              <i class='bx bx-radar icon'></i>
+              <span class="text nav-text">Radarska slika</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="bottom-content">
+        
+
+        <li class="mode">
+          <div class="sun-moon">
+            <i class='bx bx-moon icon moon'></i>
+            <i class='bx bx-sun icon sun'></i>
+          </div>
+          <span class="mode-text text">Dark mode</span>
+
+          <div class="toggle-switch">
+            <span class="switch"></span>
+          </div>
+        </li>
+
+      </div>
+    </div>
+
+  </nav>
+
+  <section class="home">
+    <div class="text">O projektu</div>
+
+     <div class="O_projektu">
+       <table class="opis" width="100%">
+         <tr>
+		 <th>
+         <h>O meni</h>
+		 <p> Moje ime je Anže. Trenutno sem študent tretjega letnika študija elektrotehnike. Rad se ukvarjam z izdelavo
+			in načrtovanjem vezij in programiranjem mikrokrmilnikov. V okviru zaključnega dela bom izdelal Vremensko postajo.
+			
+		 </p>
+		</th>
+		   <th>
+			<img  class="me" src="photo/anze.jpg" alt="anze slika" >
+		   </th>
+		 </tr>
+
+		  <tr>
+			
+			<th colspan="2">
+			 <h>Ideja projekta</h>
+			  <p> Izdelana vremenska postaja bo off grid, kar pomeni, da ne bo priključena na omrežje ampak bo imela vgrajeno baterijo,
+				  ki se bo polnila preko sončnega panela. Prednost takšne postaje je, da jo lahko postavimo kjerkoli želimo. Vremenska postaja 
+				  bo merila podatke o temperaturi, vlagi, tlaku, ambientalni svetlobi, UV žarkih ter hitrosti in smeri vetra. Uprabnik bo lahko 
+				  izmerjene podatke spremljal na spletni strani, ki se bodo na njej prikazovali s pomočjo Wi-Fi modula in MQTT internetnega protokola.
+			   
+			  </p>
+		    </th>  
+		 </tr>
+
+			<tr class="blok">
+				<th>
+					<img  class="blok" src="photo/blok.png" alt="anze slika" padding="20px" >
+				   </th>
+				<th>
+				<h>Glavne komponente</h>
+				<ul>
+				<p> -Sončni panel</p>
+				<p> -LTE usmernik</p>
+				<p> -STM32 mikrokrmilnik</p>
+				<p> -ESP Wi-Fi modul</p>
+				<p> -Baterija</p>
+				<p> -Različni senzorji</p>
+			    </ul>
+				 
+				   
+				
+			   </th>
+				  
+				</tr>
+       </table>
+
+     </div>
+  </section>
 
 
+  <script>
+    const body = document.querySelector('body'),
+      sidebar = body.querySelector('nav'),
+      toggle = body.querySelector(".toggle"),
+      modeSwitch = body.querySelector(".toggle-switch"),
+      modeText = body.querySelector(".mode-text");
+    toggle.addEventListener("click", () => {
+      sidebar.classList.toggle("close");
+    })
 
-<!--<footer>
-    Copyright © Anzeti
-</footer>-->
+    modeSwitch.addEventListener("click", () => {
+      body.classList.toggle("dark");
+      if (body.classList.contains("dark")) {
+        modeText.innerText = "Dark mode";
+      } else {
+        modeText.innerText = "Light mode";
+      }
+    });
+  </script>
 
 </body>
+
 </html>
