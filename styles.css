@@ -329,7 +329,7 @@ div.O_projektu{
     position: absolute;
     width: 90%;
     border: #90ff90; /* */
-    border-style:solid ;/*komentiri to*/
+   /* border-style:solid ;komentiri to*/
     border-radius: 5px;
     top: 10%;
     left: 5%;
@@ -347,7 +347,7 @@ div.O_projektu{
     padding: 50px;
     border: #fff;
     border: 1px;
-    border-style: solid;/*  komentiri to*/
+    /* border-style: solid; komentiri to*/
     height: 20%;
     
   }
@@ -363,19 +363,24 @@ div.O_projektu{
   }
 
  img.me{
-    width: 200px;
+    width: 250px;
     max-height: auto;
     object-fit: contain;
-    flex: 1;
     border-radius: 70%;
+    border: #90ff90;
+  border-style:solid ;
+  
+  
+  
  }
 
  img.blok{
-    border-radius: 5px;
-    width: 400px;
-    
+    width: 100%;
     max-height: auto;
     object-fit: contain;
+    border: #90ff90;
+  border-style:solid ;
+  border-radius: 5px;
  }
  p{
     color: var(--text-color);
@@ -389,7 +394,7 @@ div.O_projektu{
  }
  tr.Tren_vred {
     border: solid;
-    color:#a9ffa9;
+    color: var(--text-color);
     width: 10%;
     padding: 0;
   }
@@ -412,8 +417,9 @@ div.O_projektu{
   }
 
   div.me{
-    border: 1px solid black;
+    /*border: 1px solid black;*/
+    align-items: center;
     flex: 1;
-    padding: 10px;
     width: 50%;
+    
   }
