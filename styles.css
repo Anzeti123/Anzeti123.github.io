@@ -285,7 +285,6 @@ body.dark .switch::before {
 
 .home {
   position: absolute;
- 
   top: 0;
   top: 0;
   left: 250px;
@@ -329,8 +328,8 @@ div.radar_slika{
 div.O_projektu{
     position: absolute;
     width: 90%;
-   /* border: #90ff90;*/
-    /*border-style:solid ;*/
+    border: #90ff90; /* */
+    border-style:solid ;/*komentiri to*/
     border-radius: 5px;
     top: 10%;
     left: 5%;
@@ -344,12 +343,11 @@ div.O_projektu{
    font-size:1vw;
   }
 
-  /*centralno za tabelo samo za pregled med poskušanjem */
   table,tr,th{
     padding: 50px;
     border: #fff;
     border: 1px;
-    /*border-style: solid;*/
+    border-style: solid;/*  komentiri to*/
     height: 20%;
     
   }
@@ -359,43 +357,35 @@ div.O_projektu{
   }
 
   h{
-    color:#a9ffa9;
+    color: var(--text-color);
     font-size:2vw; 
+    padding-bottom: 200px;
   }
 
  img.me{
-    padding: 50px;
-    max-width: 100%;
-    height: 100%;
-    border-top-right-radius: 70%;
-    border-bottom-left-radius: 70%;
-    border-bottom-right-radius: 70%;
-    border-top-left-radius: 70%;
+    width: 200px;
+    max-height: auto;
+    object-fit: contain;
+    flex: 1;
+    border-radius: 70%;
  }
 
  img.blok{
-    padding: 10px;
-    max-width: 100%;
-    height: 100%;
     border-radius: 5px;
- }
-
- tr.blok{
-
-    width: 90%;
- }
-
- p{
-    color:#a9ffa9;
- }
-
-
-
- table.Trenutna_vred{
+    width: 400px;
     
+    max-height: auto;
+    object-fit: contain;
+ }
+ p{
+    color: var(--text-color);
+    
+    /*color:#a9ffa9; */
+ }
+
+ table.Trenutna_vred{  
     width: 100%;
-    padding: 0;
-   
+    padding: 0; 
  }
  tr.Tren_vred {
     border: solid;
@@ -408,4 +398,22 @@ div.O_projektu{
     border: solid;
     width: 15%;
     padding: 3px;
+  }
+
+  section.opis{
+    display: flex;
+    flex-direction: row;
+    gap: 20px; 
+    padding: 30px;
+    align-items: center;
+    margin-left: 10%;
+    margin-right: 10%;
+
+  }
+
+  div.me{
+    border: 1px solid black;
+    flex: 1;
+    padding: 10px;
+    width: 50%;
   }
