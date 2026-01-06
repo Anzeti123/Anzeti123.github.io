@@ -28,14 +28,9 @@ const mqttOptions = {
   // Omit username and password for brokers that don't require authentication
 };
 
-const temp_topic = 'WS_temp'; // Change this to your actual temperature topic
-const humidity_topic = 'WS_humidity';
-const pressure_topic = 'WS_pressure';
-const UVlight_topic = 'WS_UVlight';
-const brightness_topic = 'WS_brightness';
-const wind_speed_topic = 'WS_wind_speed';
-const wind_direction_topic = 'WS_wind_direction';
-
+const temp_topic = 'Temperature'; 
+const humidity_topic = 'Humidity';
+const HeaterStatus_topic = 'HeaterStatus';
 
 function init_mqtt() {
   const client = mqtt.connect(mqttBroker, mqttOptions);
@@ -47,16 +42,8 @@ function init_mqtt() {
     console.log('Subscribed to topic:', temp_topic);
     client.subscribe(humidity_topic);
     console.log('Subscribed to topic:', humidity_topic);
-    client.subscribe(pressure_topic);
-    console.log('Subscribed to topic:', pressure_topic);
-    client.subscribe(UVlight_topic);
-    console.log('Subscribed to topic:', UVlight_topic);
-    client.subscribe(brightness_topic);
-    console.log('Subscribed to topic:', brightness_topic);
-    client.subscribe(wind_speed_topic);
-    console.log('Subscribed to topic:', wind_speed_topic);
-    client.subscribe(wind_direction_topic);
-    console.log('Subscribed to topic:', wind_direction_topic);
+    client.subscribe(HeaterStatus_topic);
+    console.log('Subscribed to topic:', HeaterStatus_topic);
   });
 
   client.on('message', function (topic, message) {
@@ -68,37 +55,17 @@ function onMessageArrived(message) {
   console.log(message.destinationName, '', message.payloadString);
 
   if (message.destinationName === temp_topic) {
-    const temperatureElement = document.getElementById("WS_temp");
+    const temperatureElement = document.getElementById("Temperature");
     temperatureElement.innerHTML = message.payloadString;
   }
 
   if (message.destinationName === humidity_topic) {
-    const temperatureElement = document.getElementById("WS_humidity");
+    const temperatureElement = document.getElementById("Humidity");
     temperatureElement.innerHTML = message.payloadString;
   }
 
   if (message.destinationName === pressure_topic) {
-    const temperatureElement = document.getElementById("WS_pressure");
-    temperatureElement.innerHTML = message.payloadString;
-  }
-
-  if (message.destinationName === UVlight_topic) {
-    const temperatureElement = document.getElementById("WS_UVlight");
-    temperatureElement.innerHTML = message.payloadString;
-  }
-
-  if (message.destinationName === brightness_topic) {
-    const temperatureElement = document.getElementById("WS_brightness");
-    temperatureElement.innerHTML = message.payloadString;
-  }
-
-  if (message.destinationName === wind_speed_topic) {
-    const temperatureElement = document.getElementById("WS_wind_speed");
-    temperatureElement.innerHTML = message.payloadString;
-  }
-
-  if (message.destinationName === wind_direction_topic) {
-    const temperatureElement = document.getElementById("WS_wind_direction");
+    const temperatureElement = document.getElementById("HeaterStatus");
     temperatureElement.innerHTML = message.payloadString;
   }
 }  
